@@ -2,8 +2,8 @@ import "vuetify/styles";
 
 import { createVuetify } from "vuetify";
 // import type { ThemeDefinition } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
+//import * as components from "vuetify/components";
+//import * as directives from "vuetify/directives";
 import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 
 // const myCustomLightTheme: ThemeDefinition = {
@@ -36,6 +36,6 @@ export default createVuetify({
       mdi,
     },
   },
-  components,
-  directives,
+  //components,
+  //directives,
 });
