@@ -24,7 +24,7 @@ import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 
 export default createVuetify({
   theme: {
-    defaultTheme: "dark",
+    defaultTheme: "light",
     // themes: {
     //   myCustomLightTheme,
     // },

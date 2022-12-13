@@ -15,6 +15,7 @@ const facilities = [
         id: 1,
         name_pri: "Zeiss Supra 55",
         name_sec: "SEM",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -26,6 +27,7 @@ const facilities = [
         id: 2,
         name_pri: "JOEL JEM2100",
         name_sec: "TEM",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -42,6 +44,7 @@ const facilities = [
         id: 1,
         name_pri: "Zeiss LSM 800",
         name_sec: "Confocal",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -53,6 +56,7 @@ const facilities = [
         id: 2,
         name_pri: "Zeiss LSM 880",
         name_sec: "Confocal",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -64,6 +68,7 @@ const facilities = [
         id: 3,
         name_pri: "Nikon TiE",
         name_sec: "Fluorescence",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -75,6 +80,7 @@ const facilities = [
         id: 4,
         name_pri: "Bruker Ultima 4",
         name_sec: "Multi-Photon",
+        campus: "CCNY",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image:
@@ -92,7 +98,7 @@ const facilities = [
     <v-app-bar app clipped-right density="prominent">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>CCNY Core Facilities</v-toolbar-title>
+      <v-toolbar-title>CUNY Core Facilities</v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app clipped></v-navigation-drawer>
     <v-main>
@@ -116,7 +122,8 @@ const facilities = [
               >
               </v-img>
               <v-card-title>{{ e.name_pri }}</v-card-title>
-              <v-card-subtitle>{{ e.name_sec }}</v-card-subtitle>
+              <v-card-subtitle>Type: {{ e.name_sec }}</v-card-subtitle>
+              <v-card-subtitle>Campus: {{ e.campus }}</v-card-subtitle>
               <v-card-text>
                 {{ e.description }}
               </v-card-text>
@@ -130,7 +137,7 @@ const facilities = [
         </v-row>
       </v-container>
     </v-main>
-    <v-footer app> Test</v-footer>
+    <v-footer app> CUNY Core Facilities @2022</v-footer>
   </v-app>
 </template>
 
