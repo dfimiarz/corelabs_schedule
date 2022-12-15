@@ -95,14 +95,30 @@ const facilities = [
 
 <template>
   <v-app>
-    <v-app-bar app clipped-right density="prominent">
+    <v-app-bar app clipped-right>
+      <v-toolbar-title>CORE FACILITIES</v-toolbar-title>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>CUNY Core Facilities</v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" app clipped></v-navigation-drawer>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+      location="right"
+    ></v-navigation-drawer>
     <v-main>
-      <v-container>
+      <section>
+        <v-row>
+          <v-col cols="12">
+            <v-img
+              src="https://www.ccny.cuny.edu/sites/default/files/styles/section_background_image/public/2022-11/TEM_hero.jpg?itok=--jaTork"
+              :min-height="'calc(100vh - ' + 64 + 'px)'"
+              cover
+            >
+            </v-img>
+          </v-col>
+        </v-row>
+      </section>
+      <!-- <v-container>
         <v-row v-for="(f, index) in facilities" :key="index">
           <v-col cols="12">
             <div class="text-h5 text-md-h4">{{ f.category }}</div>
@@ -135,7 +151,7 @@ const facilities = [
             </v-card>
           </v-col>
         </v-row>
-      </v-container>
+      </v-container> -->
     </v-main>
     <v-footer app> CUNY Core Facilities @2022</v-footer>
   </v-app>
