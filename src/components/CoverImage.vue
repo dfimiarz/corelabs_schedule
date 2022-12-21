@@ -11,7 +11,7 @@ const { smAndDown } = useDisplay();
 const { mainRect } = useLayout();
 
 const main_height = computed(() => {
-  console.log(mainRect.value);
+  //console.log(mainRect.value);
   return mainRect.value.top + mainRect.value.bottom;
 });
 
@@ -73,9 +73,9 @@ const main_height = computed(() => {
               </v-row>
               <v-row justify="center">
                 <v-col cols="12" class="text-center">
-                  <div class="text-body-1 text-white">
+                  <a href="/newaccount" class="text-body-1 text-white">
                     Don't have an account?
-                  </div>
+                  </a>
                 </v-col>
               </v-row>
             </v-col>

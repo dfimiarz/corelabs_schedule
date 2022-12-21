@@ -113,6 +113,15 @@ const drawer: Ref<boolean> = ref(false);
       <section>
         <CoverImage></CoverImage>
       </section>
+      <section>
+        <v-container>
+          <v-row>
+            <v-col col="12">
+              <v-sheet height="400"> </v-sheet>
+            </v-col>
+          </v-row>
+        </v-container>
+      </section>
     </v-main>
     <v-footer app> CUNY Core Facilities @2022</v-footer>
   </v-app>
