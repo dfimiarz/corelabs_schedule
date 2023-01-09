@@ -25,8 +25,8 @@ import { useDisplay } from "vuetify";
 const { name } = useDisplay();
 
 const onResize = () => {
-    calendarOptions.duration = dayDuration;
-}
+    calendarOptions.duration = { days: dayDuration.value }
+};
 
 const calendarOptions = reactive({
     height: '100%',
@@ -40,23 +40,20 @@ const calendarOptions = reactive({
     ]
 })
 
-const dayDuration = computed(() => {
-    // name is reactive and
-    // must use .value
+const dayDuration = computed<number>(() => {
     switch (name.value) {
-        case 'xs': return { days: 1 }
-        case 'sm': return { days: 1 }
-        case 'md': return { days: 2 }
-        case 'lg': return { days: 7 }
-        case 'xl': return { days: 7 }
-        case 'xxl': return { days: 7 }
+        case 'xs': return 1
+        case 'sm': return 3
+        case 'md': return 3
+        case 'lg': return 7
+        case 'xl': return 7
+        case 'xxl': return 7
+        default: return 7
     }
-
-    return undefined
 });
 
 onMounted(() => {
-   onResize();
+    onResize();
 })
 
 
