@@ -1,94 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import type { Ref } from "vue";
-import CoverImage from "@/components/CoverImage.vue";
+
 
 const drawer: Ref<boolean> = ref(false);
 
-// const facilities = [
-//   {
-//     category: "Electron Microscopy",
-//     equipment: [
-//       {
-//         id: 1,
-//         name_pri: "Zeiss Supra 55",
-//         name_sec: "SEM",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//       {
-//         id: 2,
-//         name_pri: "JOEL JEM2100",
-//         name_sec: "TEM",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Light Microscopy",
-//     equipment: [
-//       {
-//         id: 1,
-//         name_pri: "Zeiss LSM 800",
-//         name_sec: "Confocal",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//       {
-//         id: 2,
-//         name_pri: "Zeiss LSM 880",
-//         name_sec: "Confocal",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//       {
-//         id: 3,
-//         name_pri: "Nikon TiE",
-//         name_sec: "Fluorescence",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//       {
-//         id: 4,
-//         name_pri: "Bruker Ultima 4",
-//         name_sec: "Multi-Photon",
-//         campus: "CCNY",
-//         description:
-//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-//         image:
-//           "https://www.ccny.cuny.edu/sites/default/files/styles/gallery_image_thumbnail/public/2022-11/supra_55_overview.jpg?itok=oyUsUPkb",
-//         website: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//         schedule: "https://www.ccny.cuny.edu/facilities/electron-microscopy",
-//       },
-//     ],
-//   },
-// ];
 </script>
 
 <template>
@@ -110,18 +26,7 @@ const drawer: Ref<boolean> = ref(false);
       location="right"
     ></v-navigation-drawer>
     <v-main>
-      <section>
-        <CoverImage></CoverImage>
-      </section>
-      <section>
-        <v-container>
-          <v-row>
-            <v-col col="12">
-              <v-sheet height="400"> </v-sheet>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
+      <router-view></router-view>
     </v-main>
     <v-footer app> CUNY Core Facilities @2022</v-footer>
   </v-app>

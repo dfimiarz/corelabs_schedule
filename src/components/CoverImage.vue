@@ -29,7 +29,7 @@ const main_height = computed(() => {
         cover
       >
         <template #sources>
-          <source :srcset="mobile_cover" media="(max-width: 600px)" />
+          <source :srcset="mobile_cover" media="(max-width: 800px)" />
         </template>
         <v-container class="fill-height">
           <v-row class="fill-height" justify="center" align="center">
