@@ -2,9 +2,7 @@
 import { ref } from "vue";
 import type { Ref } from "vue";
 
-
 const drawer: Ref<boolean> = ref(false);
-
 </script>
 
 <template>
