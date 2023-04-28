@@ -25,12 +25,15 @@
               </v-col>
             </v-row>
           </v-container>
-          <v-container class="pa-2">
+          <v-container class="pa-1">
             <v-row no-gutters>
-              <v-col cols="12">
+              <v-col cols="10">
                 <v-btn size="small" class="ml-2" color="purple">Today</v-btn>
                 <v-btn size="small" class="ml-2" color="purple">Prev</v-btn>
                 <v-btn size="small" class="ml-2" color="purple">Next</v-btn>
+              </v-col>
+              <v-col cols="2">
+                <v-btn class="ml-2" color="purple">Book</v-btn>
               </v-col>
             </v-row>
           </v-container>
