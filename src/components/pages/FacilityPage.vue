@@ -3,16 +3,13 @@
     <v-row class="fill-height" no-gutters>
       <v-col cols="12">
         <div class="d-flex flex-column fill-height">
-          <v-container class="pa-1">
+          <v-container class="pa-0">
             <v-row no-gutters justify="center" align="center">
               <v-col cols="10">
                 <v-row no-gutters>
-                  <v-col> 
-                    <div class="text-h4">LSM 880</div>
+                  <v-col>
+                    <span class="text-h4 text-md-h3">LSM 880</span>
                   </v-col>
-                  <!-- <v-col cols="2">
-                    <v-btn size="x-small" :icon="mdiInformation" color="red"></v-btn>
-                  </v-col> -->
                 </v-row>
               </v-col>
               <v-col cols="2" class="text-right">
@@ -23,7 +20,17 @@
           <v-container class="pa-1">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-alert type="warning" density="compact" closable>Please note that the facility will be closed on Dec 25th. Please contact facility manager if you have additional questions</v-alert>
+                <v-alert type="warning" density="compact" closable>Please note that the facility will be closed on Dec
+                  25th. Please contact facility manager if you have additional questions</v-alert>
+              </v-col>
+            </v-row>
+          </v-container>
+          <v-container class="pa-2">
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-btn size="small" class="ml-2" color="purple">Today</v-btn>
+                <v-btn size="small" class="ml-2" color="purple">Prev</v-btn>
+                <v-btn size="small" class="ml-2" color="purple">Next</v-btn>
               </v-col>
             </v-row>
           </v-container>
