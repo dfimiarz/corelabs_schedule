@@ -13,27 +13,32 @@
                 </v-row>
               </v-col>
               <v-col cols="2" class="text-right">
-                <v-btn size="x-small" class="ml-2" :icon="mdiCog" color="purple"></v-btn>
+                <v-btn
+                  size="x-small"
+                  class="ml-2"
+                  :icon="mdiCog"
+                  color="purple"
+                ></v-btn>
               </v-col>
             </v-row>
           </v-container>
           <v-container class="pa-1">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-alert type="warning" density="compact" closable>Please note that the facility will be closed on Dec
-                  25th. Please contact facility manager if you have additional questions</v-alert>
+                <v-alert type="warning" density="compact" closable
+                  >Please note that the facility will be closed on Dec 25th.
+                  Please contact facility manager if you have additional
+                  questions</v-alert
+                >
               </v-col>
             </v-row>
           </v-container>
           <v-container class="pa-1">
             <v-row no-gutters>
-              <v-col cols="10">
+              <v-col cols="10" align-self="center">
                 <v-btn size="small" class="ml-2" color="purple">Today</v-btn>
                 <v-btn size="small" class="ml-2" color="purple">Prev</v-btn>
                 <v-btn size="small" class="ml-2" color="purple">Next</v-btn>
-              </v-col>
-              <v-col cols="2">
-                <v-btn class="ml-2" color="purple">Book</v-btn>
               </v-col>
             </v-row>
           </v-container>
@@ -54,7 +59,7 @@
 <script lang="ts" setup>
 import FullCalendar from "@fullcalendar/vue3";
 import timeGridPlugin from "@fullcalendar/timegrid";
-import { mdiCog, mdiInformation } from "@mdi/js";
+import { mdiCog } from "@mdi/js";
 
 import { reactive, computed, onMounted } from "vue";
 
@@ -76,7 +81,7 @@ const calendarOptions = reactive({
       allDaySlot: false,
     },
   },
-  headerToolbar: false,
+  headerToolbar: { start: "", center: "", end: "" },
 });
 
 const dayDuration = computed<number>(() => {
